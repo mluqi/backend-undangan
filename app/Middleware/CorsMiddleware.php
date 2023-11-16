@@ -15,7 +15,7 @@ final class CorsMiddleware implements MiddlewareInterface
         }
 
         $header = respond()->getHeader();
-        $header->set('Access-Control-Allow-Origin', '*');
+        $header->set('Access-Control-Allow-Origin', '*', 'https://theweddingof-afishinta.vercel.app');
         $header->set('Vary', 'Accept, Accept-Encoding, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, User-Agent');
 
         if (!$request->method(Request::OPTIONS)) {
